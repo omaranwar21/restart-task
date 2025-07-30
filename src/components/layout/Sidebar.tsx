@@ -12,16 +12,11 @@ const navigation = [
   { name: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
 
-export default function Sidebar({ className }: { className?: string }) {
+export default function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div
-      className={cn(
-        "w-full md:relative md:w-56 bg-white backdrop:blur-sm shadow-lg md:h-full h-fit",
-        className
-      )}
-    >
+    <div className="w-full md:relative fixed bottom-0 z-50 md:w-56 bg-white backdrop:blur-sm shadow-lg md:h-full h-fit">
       <div className="md:block hidden p-6 h-fit">
         <h1 className="text-2xl font-bold text-gray-800">Admin Panel</h1>
       </div>
