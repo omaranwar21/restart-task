@@ -21,7 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-background text-foreground`}>
+      <body
+        className={`${inter.className} bg-background text-foreground max-w-full overflow-x-hidden`}
+      >
         <QueryProvider>
           <TopLoader />
           <AuthProvider>
