@@ -11,11 +11,11 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="flex h-[100svh] bg-gray-50">
+    <div className="flex h-[100svh] md:h-screen bg-gray-50">
       <Sidebar />
       <div className="relative flex-1 flex flex-col bg-transparent">
         <Header />
-        <main className="p-6 mb-20 overflow-auto">{children}</main>
+        <main className="px-6 pt-20 pb-20 md:pb-5 overflow-auto">{children}</main>
       </div>
     </div>
   );
