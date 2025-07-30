@@ -15,7 +15,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
       <Sidebar />
       <div className="relative h-screen flex-1 overflow-auto flex flex-col bg-transparent">
         <Header />
-        <main className="p-6 mb-16 md:mb-0">{children}</main>
+        <main className="p-6 mb-20 md:mb-0">{children}</main>
       </div>
     </div>
   );
