@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { BarChart3, Package, Users, TrendingUp } from "lucide-react";
-import { withAuth } from "@/hocs/auth-context";
+import { withAuth } from "@/hocs/AuthProvider";
 
 const stats = [
   {

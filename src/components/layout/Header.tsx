@@ -2,7 +2,7 @@
 import React from "react";
 import { Bell, LogOut, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/hocs/auth-context";
+import { useAuth } from "@/hocs/AuthProvider";
 import CustomTooltipProvider from "../common/CustomTooltipProvider";
 
 export default function Header() {

@@ -7,7 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { withAuth } from "@/hocs/auth-context";
+import { withAuth } from "@/hocs/AuthProvider";
 import { SettingsIcon } from "lucide-react";
 
 function SettingsPage() {

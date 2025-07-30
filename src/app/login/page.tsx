@@ -3,7 +3,7 @@
 import type React from "react";
 
 import { useState } from "react";
-import { useAuth } from "@/hocs/auth-context";
+import { useAuth } from "@/hocs/AuthProvider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
