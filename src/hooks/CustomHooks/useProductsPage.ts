@@ -9,7 +9,7 @@ import { IProduct } from "@/app/api/Products";
 export function useProductsPage() {
   const { data: products, isLoading: loading } = useGetAllProducts();
   const { mutate: deleteProduct, isPending: isDeleting } = useProductDelete();
-  
+
   const [searchTerm, setSearchTerm] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<IProduct | null>(null);
@@ -45,15 +45,17 @@ export function useProductsPage() {
 
   const confirmDeleteProduct = () => {
     if (!productToDelete) return;
-    
+
     deleteProduct(productToDelete.id, {
       onSuccess: () => {
         setIsDeleteModalOpen(false);
         setProductToDelete(null);
         toast.success(`Product "${productToDelete.name}" deleted successfully`);
       },
-      onError: (error: any) => {
-        toast.error(`Failed to delete product: ${error.message || 'Unknown error'}`);
+      onError: (error) => {
+        toast.error(
+          `Failed to delete product: ${error.message || "Unknown error"}`
+        );
       },
     });
   };
@@ -73,7 +75,7 @@ export function useProductsPage() {
     filteredProducts,
     loading,
     isDeleting,
-    
+
     // State
     searchTerm,
     isModalOpen,
@@ -81,7 +83,7 @@ export function useProductsPage() {
     modalMode,
     isDeleteModalOpen,
     productToDelete,
-    
+
     // Actions
     setSearchTerm,
     handleAddProduct,

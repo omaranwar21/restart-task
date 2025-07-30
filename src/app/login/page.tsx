@@ -59,6 +59,7 @@ export default function LoginPage() {
         setError("Please fill in both username and password");
       }
     } catch (error) {
+      // @typescript-eslint/no-unused-vars
       setError("Login failed. Please check your credentials.");
     } finally {
       setLoading(false);
